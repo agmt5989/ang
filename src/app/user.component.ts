@@ -2,7 +2,15 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-user',
-    template: `<h1>Well wait<h1>
+    template: `
+    <input type="text" (input)="onUserInput($event)">
+    <h1>Well, wait up {{name}}<h1>
     <p>What kind of user begins his life with a component?</p>`
 })
-export class UserComponent {}
+export class UserComponent {
+    name = 'Michael'
+
+    onUserInput(event) {
+        this.name = event.target.value;
+    }
+}
