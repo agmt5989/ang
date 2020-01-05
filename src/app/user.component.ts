@@ -1,4 +1,8 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { random } from 'lodash'; // Won't work, because it's js, not ts
+
+declare let _: any; // Fix 1
+// Fix 2 involves installing @types/lodash instead, which gives the typescript "port"
 
 @Component({
     selector: 'app-user',
@@ -25,6 +29,8 @@ export class UserComponent {
     }
 
     increaseNumber() {
-      this.number++;
+      // this.number++;
+      // this.number = _.random(1, 20); // Fix 1
+      this.number = random(1, 20); // Fix 2
     }
 }
