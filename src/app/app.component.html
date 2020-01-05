@@ -329,11 +329,6 @@
 <div class="content container" role="main">
     <p>I feel like dancing...</p>
     <p>Well, this is {{title}}</p>
-    <p>
-      {{number}}
-      <br>
-      <button (click)="increaseNumber()"></button>
-    </p>
     <app-user [name] = "rootName" (nameChanged)="nameChanged($event)"></app-user>
 </div>
 
