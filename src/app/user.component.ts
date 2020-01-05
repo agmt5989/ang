@@ -9,7 +9,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
     <p>What kind of user begins his life with a component?</p>
     <p>
       {{number}}
-    <button (click)="increaseNumber()" class="btn btn-primary btn-large"></button>
+    <button (click)="increaseNumber()" class="btn btn-primary btn-large">Increase</button>
     </p>
     <app-user-detail></app-user-detail>
     `
