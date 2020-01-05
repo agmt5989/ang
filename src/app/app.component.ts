@@ -8,8 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ng-one';
   rootName = 'el Mike';
+  number = 0;
 
   nameChanged(newName) {
     this.rootName = newName;
+  }
+
+  increaseNumber() {
+    this.number++;
   }
 }
