@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { random } from 'lodash'; // Won't work, because it's js, not ts
 
-declare let _: any; // Fix 1
+declare let _: any; // Fix 1 for lodash
 // Fix 2 involves installing @types/lodash instead, which gives the typescript "port"
 
 @Component({
@@ -18,11 +18,12 @@ declare let _: any; // Fix 1
     <app-user-detail></app-user-detail>
     `
 })
+
 export class UserComponent {
     number = 0;
 
-    @Input() name = 'Michael';
-    @Output() nameChanged = new EventEmitter<string>();
+    @Input() name = 'Initial Value';
+    @Output() nameChanged = new EventEmitter<string>(); // Reminds me of java and C#
 
     onUserInput(e) {
       this.name = e.target.value;
